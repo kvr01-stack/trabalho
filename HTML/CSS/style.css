@@ -1,0 +1,210 @@
+/* ===== RESET / CONFIG GERAL ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* rolagem suave */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #1F1F1F;
+    color: white;
+}
+
+
+/* ===== CORES DO SITE ===== */
+:root {
+    --azul: #2D9CDB;
+    --roxo: #7B61FF;
+    --fundo: #1F1F1F;
+}
+
+
+/* ===== HEADER / TOPO ===== */
+header {
+    background: var(--fundo);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ header span {
+    color: var(--azul);
+}
+
+.logo {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.logo img {
+    width: 90px;
+    height: auto;
+}
+
+.logo h1 {
+    margin: 0;
+    white-space: nowrap;
+}
+
+/* MENU */
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+/* links */
+nav a {
+    margin-right: 15px;
+}
+
+/* perfil */
+.perfil {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: auto; /* joga ele pro canto direito */
+    cursor: pointer;
+        border: 2px solid transparent; /* borda transparente para efeito hover */
+        transition: border 0.3s ease; /* transição suave para a borda */
+     background-color: #7B61FF;
+}
+
+.perfil:hover {
+    border: 2px solid #7B61FF;
+     transform: scale(1.2); /* aumenta */
+     box-shadow: 0 0 10px #7B61FF;
+    
+}
+
+/* EFEITO HOVER MENU */
+nav a:hover {
+    color: var(--azul);
+}
+
+
+/* ===== SEÇÕES ===== */
+section {
+    padding: 60px 20px;
+    scroll-margin-top: 80px;
+}
+
+/* QUEM SOMOS */
+#quem-somos {
+    background: #1F1F1F;
+}
+
+/* SERVIÇOS */
+#servicos {
+    background: #252525;
+}
+
+/* FAQ */
+#faq {
+    background: #1F1F1F;
+    
+}
+
+/* TIME */
+#time {
+    background: #252525;
+}
+
+/* CONTATO */
+#contato {
+    background: #1F1F1F;
+}
+
+
+/* ===== TÍTULOS ===== */
+h1, h2 {
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 20px;
+}
+
+/* TEXTOS */
+p {
+    margin-bottom: 10px;
+}
+
+
+/* ===== CARDS (SERVIÇOS) ===== */
+.card {
+    background: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+
+/* ===== BOTÕES ===== */
+button {
+    background: var(--roxo);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* HOVER BOTÃO */
+button:hover {
+    background: var(--azul);
+}
+
+
+/* ===== FOOTER ===== */
+footer {
+    background: black;
+    padding: 20px;
+    text-align: center;
+}
+
+/* LINKS REDES SOCIAIS */
+footer a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--azul);
+}
+
+
+/* ===== BOTÃO IA FLUTUANTE ===== */
+.btn-ia {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    background: var(--roxo);
+    color: white;
+
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    box-shadow: 0 0 15px var(--roxo);
+}
+
+/* HOVER BOTÃO IA */
+.btn-ia:hover {
+    background: var(--azul);
+    box-shadow: 0 0 20px var(--azul);
+}
