@@ -112,21 +112,45 @@ section {
 }
 
 /* FAQ */
-#faq {
-    background: #1F1F1F;
-    
+.faq-item {
+    background: #2a2a2a;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
 
-/* TIME */
-#time {
-    background: #252525;
+/* ===== TIME ===== */
+.time-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-/* CONTATO */
-#contato {
-    background: #1F1F1F;
+.membro {
+    background: #2a2a2a;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 180px;
+
+    border: 1px solid transparent;
 }
 
+
+.membro h3 {
+    color: var(--azul);
+    margin-bottom: 5px;
+}
+
+.membro p {
+    color: #ccc;
+    font-size: 14px;
+}
+
+/* ===== CONTATO ===== */
+#contato p {
+    margin-bottom: 10px;
+}
 
 /* ===== TÍTULOS ===== */
 h1, h2 {
