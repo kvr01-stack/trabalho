@@ -72,14 +72,14 @@ nav a {
 
 /* perfil */
 .perfil {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-left: auto; /* joga ele pro canto direito */
-    cursor: pointer;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-left: auto; /* joga ele pro canto direito */
+        cursor: pointer;
         border: 2px solid transparent; /* borda transparente para efeito hover */
         transition: border 0.3s ease; /* transição suave para a borda */
-     background-color: #7B61FF;
+        background-color: #7B61FF;
 }
 
 .perfil:hover {
@@ -112,6 +112,15 @@ section {
 }
 
 /* FAQ */
+#h2-faq {
+     text-align: center;
+     color: var(--roxo);
+     background: #1F1F1F;
+     font-weight: bold;
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 20px;
+
+}
 .faq-item {
     background: #2a2a2a;
     padding: 15px;
@@ -119,11 +128,33 @@ section {
     margin-bottom: 10px;
 }
 
+.faq-question {
+    text-align: center;
+    color: var(--azul);
+    margin-bottom: 10px;
+}
+.faq-item p {
+    color: #ccc;
+    font-size: 14px;
+    text-align: center;
+
+}
+
 /* ===== TIME ===== */
+
+#time h2 {
+     text-align: center;
+     color: var(--roxo);
+     background: #1F1F1F;
+     font-weight: bold;
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 20px;
+}
 .time-container {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .membro {
@@ -148,6 +179,18 @@ section {
 }
 
 /* ===== CONTATO ===== */
+#contato h2 {
+     text-align: center;
+     color: var(--roxo);
+     background: #1F1F1F;
+     font-weight: bold;
+    font-family: 'Orbitron', sans-serif;
+    margin-bottom: 20px;
+}
+#contato {
+    background: #1F1F1F;
+    text-align: center;
+}
 #contato p {
     margin-bottom: 10px;
 }
