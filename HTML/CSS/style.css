@@ -45,6 +45,11 @@ header {
  header span {
     color: var(--azul);
 }
+ header {
+    position: sticky; /* Define o comportamento de "grudar" */
+    top: 0;           /* Define que ele deve grudar exatamente no topo */
+    z-index: 1000;    /* Garante que ele fique acima de todos os outros elementos */
+ }
 
 .logo {
    display: flex;
@@ -456,13 +461,21 @@ footer a:hover {
   margin-bottom: 2.5rem;
 }
 
-.footer-brand .logo {
+.footer-brand {
+  display: flex;
+  flex-direction: column; /* Organiza os filhos em coluna */
+  align-items: flex-start; /* Alinha tudo à esquerda */
+  font-family: 'DM Serif Display', serif;
+  margin: 0 0 12px;
+
+}
+#logo {
+  color: #ffffff;
   font-family: 'DM Serif Display', serif;
   font-size: 29px;
-  color: #ffffff;
-  margin: 0 0 12px;
-  letter-spacing: -0.5px;
-  justify-content: center;
+  /* Removi o inline-block e o white-space */
+  margin: 0 0 10px 0; /* Ajuste a margem inferior para dar espaço para o badge */
+  white-space: nowrap; /* Garante que o texto não quebre em várias linhas */
 }
 
 .footer-brand p {
@@ -472,6 +485,32 @@ footer a:hover {
   margin: 0 0 1.25rem;
   max-width: 220px;
 
+}
+
+.badge {
+  display: flex;
+  align-self: flex-end; /* Mantém ele no canto */
+  margin-right: 18%;    /* Afasta um pouco da borda direita, trazendo para dentro */
+  
+  /* Mantenha seus outros estilos abaixo */
+  align-items: center;
+  gap: 6px;
+  font-size: 16px;
+  background: #1a1e2e;
+  border: 1px solid #2a2d38;
+  color: #ffffff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  width: fit-content; /* Garante que o badge não estique até o final da tela */;
+}
+
+.badge span {
+  width: 6px;
+  height: 6px;
+  background: #ffffff;
+  border-radius: 50%;
+  display: inline-block;
 }
 
 .social-links {
@@ -572,30 +611,7 @@ footer a:hover {
   color: #aaa;
 }
 
-.badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 13px;
-  background: #1a1e2e;
-  border: 1px solid #2a2d38;
-  color: #ffffff;
-  text-shadow: #424547 0px 0px 15px;
-  font-weight: bold;
-  padding: 4px 10px;
-  border-radius: 20px;
-  margin-bottom: 1rem;
-}
 
-.badge span {
-  width: 6px;
-  height: 6px;
-  background: #ffffff;
-  text-shadow: #424547 0px 0px 15px;
-  font-weight: bold;
-  border-radius: 50%;
-  display: inline-block;
-}
 
 @media (max-width: 640px) {
   .footer-grid {
