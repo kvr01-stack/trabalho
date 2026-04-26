@@ -200,46 +200,95 @@ section {
 #quem-somos {
     background: #1F1F1F;
 }
-
-/* SERVIÇOS */
-#servicos {
-    background: #252525;
-}
-
-/* FAQ */
-#h2-faq {
-     text-align: center;
-     color: var(--azul);
-     background: #1F1F1F;
-     font-weight: bold;
-    font-family: var(--fonte-titulo);
-    margin-bottom: 20px;
-
-}
-.faq-item {
+.quem-somos-conteiner {
     background: #2a2a2a;
     padding: 15px;
     border-radius: 8px;
     margin-bottom: 10px;
-    box-shadow: #2D9CDB 0px 0px 10px;
-     border: 2px solid #2D9CDB;
+    box-shadow: var(--roxo) 0px 0px 30px;
+     border: 2px solid var(--roxo);
+}
+.titulo-h1{
+    text-align: center;
+     color: var(--roxo);
+     background: var(--fundo);
+     font-weight: bold;
+    font-family: var(--fonte-titulo);
+    margin-bottom: 20px;
+}
+.titulo-h3{
+    color: var(--roxo);
+     font-weight: bold;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+}
+.quem-somos-conteiner p {
+    font-size: 20px;
 }
 
-.faq-question {
-    text-align: center;
-    color: var(--azul);
-    margin-bottom: 10px;
-}
-.faq-item p {
-    color: #ccc;
-    font-size: 14px;
-    text-align: center;
 
+/* SERVIÇOS */
+#servicos {
+    font-size: 20px;
+    background: #2a2a2a;
+    padding: 15px;
+    margin-bottom: 0rem;
+    box-shadow: #424547 0px 0px 15px;
+    border-top: 2px solid #2a2d38;
 }
+.servicos-h2{
+    text-align: center;
+     color: var(--azul);
+     background: #2a2a2a;
+     font-weight: bold;
+    font-family: var(--fonte-titulo);
+    margin-bottom: 20px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #2a2a2a;
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  flex: 1 1 250px; 
+  max-width: 300px; 
+  min-height: 200px;
+  justify-content: center;
+  box-shadow: 0 0 10px var(--azul);
+  border: 3px solid var(--azul);
+}
+
+.card h3 {
+  color: var(--azul);
+  margin-bottom: 25px;
+  font-weight: bolder;
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+.card p {
+  color: #ccc;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
 /* ===== SEÇÃO IA ===== */
 #ia {
     background: #252525;
     padding: 60px 20px;
+     box-shadow: #424547 0px 0px 15px;
+   border-top: 2px solid #2a2d38;
 }
 
 #ia h2 {
@@ -304,21 +353,24 @@ section {
     background: var(--azul);
     box-shadow: 0 0 10px var(--azul);
 }
-
+/* HOVER BOTÃO IA */
+.btn-ia:hover {
+    background: var(--azul);
+    box-shadow: 0 0 20px var(--azul);
+}
 
 /* ===== TIME ===== */
 
 #time h2 {
-     text-align: center;
-     color: var(--roxo);
-     background: #1F1F1F;
-     font-weight: bold;
+    text-align: center;
+    color: var(--roxo);
+    background: #1F1F1F;
+    font-weight: bold;
     font-family: var(--fonte-titulo);
     margin-bottom: 20px;
 }
 
-.time-container img{
-
+.time-container img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -326,6 +378,7 @@ section {
     margin-bottom: 10px;
     border: 2px solid transparent; /* borda transparente para efeito hover */
 }
+
 .ajuste-kaique {
     object-position: center 40% !important; /* Ajusta a posição da imagem para centralizar o rosto */
 }
@@ -336,14 +389,13 @@ section {
     border: 2px solid var(--azul);
 }
 
-
 .time-container {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
     justify-content: center;
-    
 }
+
 .time-container h3 {
     color: var(--azul);
     margin-bottom: 5px;
@@ -356,8 +408,7 @@ section {
     color: #ccc;
     font-size: 15px;
     font-family: var(--fonte-principal);
-    font-weight:lighter;
-     
+    font-weight: lighter;
 }
 
 .membro {
@@ -370,11 +421,11 @@ section {
     border-radius: 15px;
     text-align: center;
     width: 180px;
-   
-    box-shadow: 0 0 10px  rgb(158, 55, 226);
-    border: 3px solid rgb(158, 55, 226);
+    
+    /* Usando a variável global, fica fácil mudar para qualquer cor depois */
+    box-shadow: 0 0 10px var(--roxo);
+    border: 3px solid var(--roxo);
 }
-
 
 .membro h3 {
     color: var(--azul);
@@ -388,8 +439,53 @@ section {
     font-size: 14px;
 }
 
+/* FAQ */
+#faq {
+    background: #252525;
+    padding: 40px 20px;
+    box-shadow: #424547 0px 0px 15px;
+    border-top: 2px solid #2a2d38;
+}
+#h2-faq {
+     text-align: center;
+     color: var(--azul);
+     background: #252525;
+     font-weight: bold;
+    font-family: var(--fonte-titulo);
+    margin-bottom: 20px;
+
+}
+.faq-item {
+    background: #2a2a2a;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: #2D9CDB 0px 0px 10px;
+     border: 2px solid #2D9CDB;
+}
+
+.faq-question {
+    text-align: center;
+    color: var(--azul);
+    margin-bottom: 10px;
+}
+.faq-item p {
+    color: #ccc;
+    font-size: 18px;
+    text-align: center;
+
+}
+
 
 /* ===== CONTATO ===== */
+
+#contato {
+    background: #1F1F1F;
+    text-align: center;
+    box-shadow: #424547 0px 0px 15px;
+    border-top: 2px solid #2a2d38;
+}
+
 #contato h2 {
      text-align: center;
      color: var(--roxo);
@@ -405,10 +501,6 @@ section {
     border: auto 0 auto 0;
 }
 
-#contato {
-    background: #1F1F1F;
-    text-align: center;
-}
 #contato p {
     margin-bottom: 10px;
 }
@@ -529,11 +621,11 @@ footer a:hover {
 }
 
 .footer-wrap {
-  background: #2a2a2a;
+    background: #2a2a2a;
     padding: 15px;
     margin-bottom: 0rem;
     box-shadow: #424547 0px 0px 15px;
-     border-top: 2px solid #f8f8f9;
+    border-top: 2px solid #f8f8f9;
 }
 
 .redes-socias {
@@ -742,10 +834,4 @@ footer a:hover {
     cursor: pointer;
     
     box-shadow: 0 0 15px var(--roxo);
-}
-
-/* HOVER BOTÃO IA */
-.btn-ia:hover {
-    background: var(--azul);
-    box-shadow: 0 0 20px var(--azul);
 }
